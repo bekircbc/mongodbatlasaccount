@@ -2,6 +2,15 @@
 
 - give database and collection name for creating
 
+- write this code on terminal in dataImport folder..
+
+        mongoimport --host <cluster0-shar-01-01.2.aaas.mongodb.net:27017>--db
+        <appbookstore> --collection <employees> --type json --file <employees.json> --jsonArray --authenticationDatabase admin --ssl --username <appuserbookapi>
+
+        take this from cluster>primary
+
+        cluster0-shar-01-01.2.aaas.mongodb.net:27017
+
 # network access
 
 - Add IP Adress : 0.0.0.0./0 for allowing access from any IP...
@@ -10,12 +19,18 @@
 
 # Connecting with mongosh or compass
 
-- click Connect --
+- click Connect -- connect with MongodbShell -- write code to terminal
 
-mongosh "mongodb+srv://cluster0.aaas.mongodb.net/appbookstore" --apiVersion 1 --username appuserbookapi
+        mongosh "mongodb+srv://cluster0.aaas.mongodb.net/appbookstore" --apiVersion 1 --username appuserbookapi
 
-cluster0-shar-01-01.2.aaas.mongodb.net:27017
+- click Connect -- connect with Mongodb Compass -- write code to terminal
 
-mongoimport --host cluster0-shar-01-01.2.aaas.mongodb.net:27017 --db appbookstore --collection employees --type json --file employees.json --jsonArray --authenticationDatabase admin --ssl --username appuserbookapi
+        mongodb+srv://appuserbookapi:thisispassword@cluster0.aaas.mongodb.net
 
-mongodb+srv://appuserbookapi:\***\*\*\*\*\*\*\***@cluster0.aaas.mongodb.net/test
+# Connecting with NoSQLBooster
+
+- click connect - create in NOSqlBooster -- Authentication - password
+
+- click Connect -- connect with Mongodb Compass -- write code to terminal
+
+        mongodb+srv://appuserbookapi:thisispassword@cluster0.aaas.mongodb.net
